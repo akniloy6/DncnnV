@@ -1,3 +1,8 @@
+import sys
+
+sys.path.append('/Users/niloy/Desktop/Desktop/DncnnV/src')
+
+
 import torch.nn as nn
 from dncnn.utils.common import read_config
 from dncnn.utils.logger import logger
@@ -5,6 +10,73 @@ from dncnn.utils.logger import logger
 
 config = read_config("../../../config/config.yaml")
 model_config = config["model_config"]
+
+
+
+"""
+Model summary
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1         [-1, 64, 256, 256]           1,728
+              ReLU-2         [-1, 64, 256, 256]               0
+            Conv2d-3         [-1, 64, 256, 256]          36,864
+       BatchNorm2d-4         [-1, 64, 256, 256]             128
+              ReLU-5         [-1, 64, 256, 256]               0
+            Conv2d-6         [-1, 64, 256, 256]          36,864
+       BatchNorm2d-7         [-1, 64, 256, 256]             128
+              ReLU-8         [-1, 64, 256, 256]               0
+            Conv2d-9         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-10         [-1, 64, 256, 256]             128
+             ReLU-11         [-1, 64, 256, 256]               0
+           Conv2d-12         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-13         [-1, 64, 256, 256]             128
+             ReLU-14         [-1, 64, 256, 256]               0
+           Conv2d-15         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-16         [-1, 64, 256, 256]             128
+             ReLU-17         [-1, 64, 256, 256]               0
+           Conv2d-18         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-19         [-1, 64, 256, 256]             128
+             ReLU-20         [-1, 64, 256, 256]               0
+           Conv2d-21         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-22         [-1, 64, 256, 256]             128
+             ReLU-23         [-1, 64, 256, 256]               0
+           Conv2d-24         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-25         [-1, 64, 256, 256]             128
+             ReLU-26         [-1, 64, 256, 256]               0
+           Conv2d-27         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-28         [-1, 64, 256, 256]             128
+             ReLU-29         [-1, 64, 256, 256]               0
+           Conv2d-30         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-31         [-1, 64, 256, 256]             128
+             ReLU-32         [-1, 64, 256, 256]               0
+           Conv2d-33         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-34         [-1, 64, 256, 256]             128
+             ReLU-35         [-1, 64, 256, 256]               0
+           Conv2d-36         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-37         [-1, 64, 256, 256]             128
+             ReLU-38         [-1, 64, 256, 256]               0
+           Conv2d-39         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-40         [-1, 64, 256, 256]             128
+             ReLU-41         [-1, 64, 256, 256]               0
+           Conv2d-42         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-43         [-1, 64, 256, 256]             128
+             ReLU-44         [-1, 64, 256, 256]               0
+           Conv2d-45         [-1, 64, 256, 256]          36,864
+      BatchNorm2d-46         [-1, 64, 256, 256]             128
+             ReLU-47         [-1, 64, 256, 256]               0
+           Conv2d-48          [-1, 3, 256, 256]           1,728
+  ConvTranspose2d-49          [-1, 3, 512, 512]              84
+================================================================
+Total params: 558,420
+Trainable params: 558,420
+Non-trainable params: 0
+
+
+
+
+
+"""
 
 
 class DnCNN(nn.Module):

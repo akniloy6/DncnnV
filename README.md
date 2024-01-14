@@ -22,7 +22,8 @@ please read through the pytorch installation guide [here](https://pytorch.org/ge
 
 model config contain  up_scale parameter. this parameter is used to scale the image after feeding it to the network. Every up_scale layer will scale the image by 2.Exmple : input --> 64x64x3 image --> after 1st up_scale --> 128x128x3 image --> after 2nd up_scale --> 256x256x3 image.you need to change the transform t2 image size 256,256 to match the output size of the network.
 
-
+## Full Architecture
+![DnCNN Model](DnCNN_model.svg)
 
 ## installation and setup for training 
 
